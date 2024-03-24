@@ -15,6 +15,9 @@ public class Baraja {
             }
         }
     }
+    public List<Carta> cartasMonton() {
+        return cartas.isEmpty() ? null : cartas;
+    }
     class Carta {
     private int numero;
     private String palo;
