@@ -29,6 +29,17 @@ public class Baraja {
       public int cartasDisponibles() {
         return cartas.size();
     }
+       public List<Carta> darCartas(int cantidad) {
+        List<Carta> cartasADar = new ArrayList<>();
+        if (cantidad > cartasDisponibles()) {
+            System.out.println("No hay suficientes cartas en la baraja para dar.");
+            return cartasADar;
+        }
+        for (int i = 0; i < cantidad; i++) {
+            cartasADar.add(siguienteCarta());
+        }
+        return cartasADar;
+    }
 
     
 
