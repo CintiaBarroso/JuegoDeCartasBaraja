@@ -41,8 +41,6 @@ public class Baraja {
         return cartasADar;
     }
 
-    
-
     public List<Carta> cartasMonton() {
         return cartas.isEmpty() ? null : cartas;
     }
@@ -51,6 +49,28 @@ public class Baraja {
             System.out.println(carta);
         }
     }
+     public static void main(String[] args) {
+        Baraja baraja = new Baraja();
+        baraja.barajar();
+        System.out.println("Mostrar baraja:");
+        baraja.mostrarBaraja();
+        System.out.println("\nDar 5 cartas:");
+        List<Carta> cartasDadas = baraja.darCartas(5);
+        for (Carta carta : cartasDadas) {
+            System.out.println(carta);
+        }
+        System.out.println("\nCartas disponibles en la baraja: " + baraja.cartasDisponibles());
+        System.out.println("\nCartas en el montón:");
+        List<Carta> monton = baraja.cartasMonton();
+        if (monton != null) {
+            for (Carta carta : monton) {
+                System.out.println(carta);
+            }
+        } else {
+            System.out.println("No se ha sacado ninguna carta.");
+        }
+    }
+}
     class Carta {
     private int numero;
     private String palo;
