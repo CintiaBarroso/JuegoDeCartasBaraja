@@ -15,6 +15,9 @@ public class Baraja {
             }
         }
     }
+    public void barajar() {
+        Collections.shuffle(cartas);
+    }
     public List<Carta> cartasMonton() {
         return cartas.isEmpty() ? null : cartas;
     }
