@@ -26,4 +26,10 @@ public class Baraja {
         this.numero = numero;
         this.palo = palo;
     }
-    
+    @Override
+    public String toString() {
+        return "Carta{" +
+                "numero=" + numero +
+                ", palo='" + palo + ''' +
+                '}';
+    }
