@@ -18,6 +18,7 @@ public class Baraja {
     public void barajar() {
         Collections.shuffle(cartas);
     }
+
       public Carta siguienteCarta() {
         if (cartas.isEmpty()) {
             System.out.println("No hay más cartas en la baraja.");
@@ -25,6 +26,12 @@ public class Baraja {
         }
         return cartas.remove(0);
     }
+      public int cartasDisponibles() {
+        return cartas.size();
+    }
+
+    
+
     public List<Carta> cartasMonton() {
         return cartas.isEmpty() ? null : cartas;
     }
