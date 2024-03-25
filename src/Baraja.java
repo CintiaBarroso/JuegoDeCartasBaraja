@@ -83,6 +83,7 @@ public class Baraja {
     public String toString() {
         return "Carta{" +
                 "numero=" + numero +
-                ", palo='" + palo + ''' +
+                ", palo='" + palo + '\'' +
                 '}';
+    }
     }
