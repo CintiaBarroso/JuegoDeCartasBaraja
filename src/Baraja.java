@@ -18,6 +18,11 @@ public class Baraja {
     public List<Carta> cartasMonton() {
         return cartas.isEmpty() ? null : cartas;
     }
+     public void mostrarBaraja() {
+        for (Carta carta : cartas) {
+            System.out.println(carta);
+        }
+    }
     class Carta {
     private int numero;
     private String palo;
